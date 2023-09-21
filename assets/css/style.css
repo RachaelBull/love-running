@@ -8,6 +8,7 @@
     box-sizing: border-box;
 
 }
+
 /* Header */
 header {
     background-color: #ffffff;
@@ -29,7 +30,7 @@ header a {
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    letter-spacing:2px;
+    letter-spacing: 2px;
     color: #252525;
 }
 
@@ -42,6 +43,7 @@ body {
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
+
 /* Main */
 main {
     background-color: lightblue;
@@ -49,29 +51,31 @@ main {
     margin-top: 47px;
     /* Make main element take up any surplus space to push footer down */
 }
+
 /* Footer */
 footer {
     background-color: orange;
 }
+
 /* Navbar styles with dropdown toggle*/
 nav {
     position: absolute;
     background-color: #ffffff;
-    width:100%;
-    padding:0 1rem;
-    left:0;
+    width: 100%;
+    padding: 0 1rem;
+    left: 0;
     box-shadow: 0 2px 2px #3a3a3a;
-    display:none;
-    top:100%;
+    display: none;
+    top: 100%;
 }
 
 /* Nav toggle*/
 #nav-toggle:checked~nav {
-    display:block;
+    display: block;
 }
 
 #nav-toggle {
-    display:none;
+    display: none;
 }
 
 .nav-toggle-label {
@@ -88,6 +92,30 @@ nav {
     list-style-type: none;
 }
 
-#menu > li {
+#menu>li {
     margin-bottom: 1em;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header*/
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right:1rem;
+    }
+    
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
 }
